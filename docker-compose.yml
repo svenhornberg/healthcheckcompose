@@ -6,6 +6,8 @@ services:
     depends_on:
       rabbit:
         condition: service_healthy
+    links: 
+        - rabbit
 
   rabbit:
     build: rabbitmq/.
